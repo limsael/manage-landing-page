@@ -1,0 +1,22 @@
+@use "../abstracts";
+
+.main {
+  &__cta {
+    background-image: url(../../assets/images/bg-simplify-section-mobile.svg);
+    background-repeat: no-repeat;
+    background-color: abstracts.$orange-400;
+    padding: 1.975rem;
+    text-align: center;
+
+    &-title {
+      font-size: 2.325rem;
+      color: abstracts.$gray-50;
+      margin-block: 4rem 1.75rem;
+    }
+
+    &-btn {
+      @include abstracts.outline-regular-btn;
+      margin-block-end: 2.75rem;
+    }
+  }
+}
