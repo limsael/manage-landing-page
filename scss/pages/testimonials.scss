@@ -1,0 +1,52 @@
+@use "../abstracts";
+
+.main {
+  &__testimonials {
+    padding: 1.975rem;
+    margin-block-end: 3.75rem;
+
+    &-title {
+      color: abstracts.$blue-950;
+      font-size: 1.75rem;
+      text-align: center;
+      margin-block-end: 4.75rem;
+    }
+  }
+
+  &__testimonial {
+    position: relative;
+    margin-block-end: 2.5rem;
+    background-color: abstracts.$gray-50;
+    padding: 0.975rem;
+
+    &-img {
+      width: 50px;
+      position: absolute;
+      top: -20px;
+      left: 50%;
+      translate: -50%;
+    }
+
+    &-name,
+    &-description {
+      text-align: center;
+    }
+
+    &-name {
+      color: abstracts.$blue-950;
+      font-weight: abstracts.$bold-font-weight;
+      margin-block: 2.5rem 1.875rem;
+    }
+
+    &-description {
+      color: abstracts.$gray-70;
+      line-height: 1.5;
+    }
+
+    &-btn {
+      @include abstracts.regular-btn;
+      display: block;
+      margin: 0 auto;
+    }
+  }
+}

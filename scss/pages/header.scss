@@ -70,8 +70,9 @@
     }
 
     &-description {
-      // color: abstracts.$gray-50;
+      color: abstracts.$gray-70;
       margin-block-end: 1.25rem;
+      line-height: 1.5;
     }
 
     &-btn {
