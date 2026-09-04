@@ -1,0 +1,25 @@
+@use "../abstracts";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: abstracts.$font-family;
+  font-size: 1rem;
+  padding: 1.975rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}

@@ -1,0 +1,79 @@
+@use "../abstracts";
+
+.header {
+  &__nav {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-block-end: 2.25rem;
+
+    &-list {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.625rem;
+      background-color: abstracts.$gray-50;
+      padding: 2.5rem 1.5rem;
+      right: 0;
+      left: 0;
+      top: 50px;
+      translate: 0 -100%;
+      visibility: hidden;
+      transition:
+        translate 0.3s ease-in-out,
+        visibility 0.3s ease-in-out;
+
+      &.active {
+        translate: 0 0;
+        visibility: visible;
+      }
+    }
+
+    &-link {
+      color: abstracts.$blue-950;
+      font-weight: abstracts.$bold-font-weight;
+    }
+
+    &-toggle {
+      cursor: pointer;
+    }
+
+    &-btn {
+      display: none;
+    }
+  }
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.975rem;
+  margin-block-end: 2.5rem;
+
+  &__analytics {
+    &-img {
+      width: 100%;
+    }
+  }
+
+  &__text {
+    text-align: center;
+
+    &-title {
+      color: abstracts.$blue-950;
+      font-weight: abstracts.$bold-font-weight;
+      margin-block-end: 0.975rem;
+    }
+
+    &-description {
+      // color: abstracts.$gray-50;
+      margin-block-end: 1.25rem;
+    }
+
+    &-btn {
+      @include abstracts.regular-btn;
+    }
+  }
+}
