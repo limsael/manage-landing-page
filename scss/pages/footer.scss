@@ -1,0 +1,72 @@
+@use "../abstracts";
+
+.footer {
+  background-color: abstracts.$gray-950;
+  padding: 1.975rem;
+  display: grid;
+  gap: 3.5rem;
+
+  &__data {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 3.75rem;
+  }
+
+  &__socials {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 2.5rem;
+
+    &-img {
+      display: block;
+      margin: 0 auto;
+      filter: brightness(0) invert(1);
+    }
+
+    &-links {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &-link img {
+      width: 30px;
+    }
+  }
+
+  &__links {
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 0.975rem;
+
+    &-link {
+      color: abstracts.$gray-50;
+      display: inline-block;
+      margin-block: 0.625rem;
+    }
+  }
+
+  &__mail {
+    margin-block-start: 0.975rem;
+
+    &-input {
+      padding: 0.975rem 1.75rem;
+      border-radius: 1.925rem;
+      border: none;
+      outline: none;
+
+      &:focus {
+        outline: 2px solid abstracts.$orange-600;
+      }
+    }
+
+    &-btn {
+      @include abstracts.regular-btn;
+    }
+  }
+
+  &__copyright {
+    color: abstracts.$gray-70;
+    text-align: center;
+    font-size: 0.975rem;
+  }
+}
