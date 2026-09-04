@@ -1,6 +1,8 @@
 @use "../abstracts";
 
 .header {
+  padding: 1.975rem;
+
   &__nav {
     position: relative;
     display: flex;
@@ -50,7 +52,7 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: 0.975rem;
-  margin-block-end: 2.5rem;
+  margin-block-end: 3.5rem;
 
   &__analytics {
     &-img {

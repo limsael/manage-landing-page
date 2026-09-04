@@ -1,0 +1,65 @@
+@use "../abstracts";
+
+.main {
+  &__about {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.275rem;
+    margin-block-end: 3.5rem;
+
+    &-text {
+      text-align: center;
+      margin-block-end: 2rem;
+      padding: 1.975rem;
+
+      &-title {
+        font-size: 1.75rem;
+        font-weight: abstracts.$bold-font-weight;
+        color: abstracts.$blue-950;
+        margin-block-end: 1.125rem;
+      }
+
+      &-description {
+        color: abstracts.$blue-950;
+        line-height: 1.75;
+      }
+    }
+
+    &-services {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    &-service {
+      padding-inline-start: 0.625rem;
+      margin-block-end: 0.975rem;
+
+      &-title {
+        font-size: 0.9375rem;
+        margin-block-end: 0.975rem;
+        color: abstracts.$blue-950;
+        background-color: abstracts.$orange-50;
+        border-top-left-radius: 1.925rem;
+        border-bottom-left-radius: 1.925rem;
+
+        &-btn {
+          @include abstracts.span-btn;
+          display: inline-block;
+        }
+
+        &-text {
+          display: inline-block;
+          margin-inline-start: 0.625rem;
+        }
+      }
+
+      &-description {
+        padding-inline: 0.625rem;
+        color: abstracts.$blue-950;
+        line-height: 2;
+        font-size: 0.9375rem;
+      }
+    }
+  }
+}

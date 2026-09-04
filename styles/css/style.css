@@ -12,7 +12,6 @@ html {
 body {
   font-family: "Be Vietnam Pro", sans-serif;
   font-size: 1rem;
-  padding: 1.975rem;
 }
 
 a {
@@ -23,6 +22,9 @@ ul {
   list-style: none;
 }
 
+.header {
+  padding: 1.975rem;
+}
 .header__nav {
   position: relative;
   display: flex;
@@ -64,7 +66,7 @@ ul {
   display: grid;
   grid-template-columns: 1fr;
   gap: 0.975rem;
-  margin-block-end: 2.5rem;
+  margin-block-end: 3.5rem;
 }
 .hero__analytics-img {
   width: 100%;
@@ -95,6 +97,74 @@ ul {
 }
 .hero__text-btn:hover {
   background-color: hsl(12, 87%, 69%);
+}
+
+.main__about {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.275rem;
+  margin-block-end: 3.5rem;
+}
+.main__about-text {
+  text-align: center;
+  margin-block-end: 2rem;
+  padding: 1.975rem;
+}
+.main__about-text-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: hsl(228, 39%, 23%);
+  margin-block-end: 1.125rem;
+}
+.main__about-text-description {
+  color: hsl(228, 39%, 23%);
+  line-height: 1.75;
+}
+.main__about-services {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+.main__about-service {
+  padding-inline-start: 0.625rem;
+  margin-block-end: 0.975rem;
+}
+.main__about-service-title {
+  font-size: 0.9375rem;
+  margin-block-end: 0.975rem;
+  color: hsl(228, 39%, 23%);
+  background-color: hsl(13, 100%, 96%);
+  border-top-left-radius: 1.925rem;
+  border-bottom-left-radius: 1.925rem;
+}
+.main__about-service-title-btn {
+  padding: 0.625rem 1.275rem;
+  border: none;
+  outline: none;
+  border-radius: 1.925rem;
+  background-color: hsl(12, 88%, 59%);
+  color: hsl(0, 0%, 98%);
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0 0.75rem 0.75rem -0.375rem rgba(95.08%, 37.352%, 22.92%, 0.5);
+  transition: background-color 0.3s ease-in-out;
+}
+.main__about-service-title-btn:hover {
+  background-color: hsl(12, 87%, 69%);
+}
+.main__about-service-title-btn {
+  display: inline-block;
+}
+.main__about-service-title-text {
+  display: inline-block;
+  margin-inline-start: 0.625rem;
+}
+.main__about-service-description {
+  padding-inline: 0.625rem;
+  color: hsl(228, 39%, 23%);
+  line-height: 2;
+  font-size: 0.9375rem;
 }
 
 /*# sourceMappingURL=style.css.map */
