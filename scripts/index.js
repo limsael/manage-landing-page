@@ -34,7 +34,7 @@ function handleFormSubmit(e) {
 
   const value = footerFormInput.value;
 
-  if (!emailRegex.test(value)) {
+  if (!emailRegex.test(value) || value === "") {
     footerFormError.innerText = "Please insert a valid email";
     footerFormInput.style.color = "hsl(12, 88%, 59%)";
   } else {
