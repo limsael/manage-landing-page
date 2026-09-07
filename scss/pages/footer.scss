@@ -65,6 +65,8 @@
       border-radius: 1.925rem;
       border: none;
       outline: none;
+      font-size: 1rem;
+      font-weight: abstracts.$medium-font-weight;
 
       &:focus {
         outline: 2px solid abstracts.$orange-600;
@@ -77,8 +79,9 @@
 
     &-error {
       margin-block-start: 0.5rem;
-      color: abstracts.$orange-600;
+      color: abstracts.$orange-400;
       font-style: italic;
+      font-weight: abstracts.$medium-font-weight;
     }
   }
 

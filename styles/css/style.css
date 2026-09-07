@@ -54,6 +54,10 @@ ul {
 .header__nav-link {
   color: hsl(228, 39%, 23%);
   font-weight: 700;
+  transition: color 0.3s ease-in-out;
+}
+.header__nav-link:hover {
+  color: hsl(240, 8%, 78%);
 }
 .header__nav-toggle {
   cursor: pointer;
@@ -359,6 +363,8 @@ ul {
   border-radius: 1.925rem;
   border: none;
   outline: none;
+  font-size: 1rem;
+  font-weight: 500;
 }
 .footer__mail-input:focus {
   outline: 2px solid hsl(12, 87%, 69%);
@@ -384,8 +390,9 @@ ul {
 }
 .footer__mail-error {
   margin-block-start: 0.5rem;
-  color: hsl(12, 87%, 69%);
+  color: hsl(12, 88%, 59%);
   font-style: italic;
+  font-weight: 500;
 }
 .footer__copyright {
   color: hsl(240, 8%, 78%);

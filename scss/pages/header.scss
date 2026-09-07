@@ -36,6 +36,11 @@
     &-link {
       color: abstracts.$blue-950;
       font-weight: abstracts.$bold-font-weight;
+      transition: color 0.3s ease-in-out;
+
+      &:hover {
+        color: abstracts.$gray-70;
+      }
     }
 
     &-toggle {

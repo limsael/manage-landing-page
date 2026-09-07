@@ -2,12 +2,14 @@ const navList = document.getElementById("header-nav-list");
 const navToggle = document.getElementById("header-nav-toggle");
 const navToggleImg = document.querySelector("#header-nav-toggle img");
 const navLinks = document.querySelectorAll(".header__nav-link");
-const footerForm = document.getElementById("footer-mail");
-const footerFormInput = document.getElementById("footer-mail-input");
-const footerFormBtn = document.getElementById("footer-mail-btn");
 const slider = document.getElementById("main-testimonial-cards");
 const dotsContainer = document.getElementById("main-testimonial-dots");
 const slides = Array.from(slider.children);
+const footerForm = document.getElementById("footer-mail");
+const footerFormInput = document.getElementById("footer-mail-input");
+const footerFormBtn = document.getElementById("footer-mail-btn");
+const footerFormError = document.getElementById("footer-mail-error");
+const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
 /* ================ Functions ============== */
 
@@ -27,12 +29,31 @@ function closeNavbar() {
   navToggleImg.src = "./assets/images/icon-hamburger.svg";
 }
 
+function handleFormSubmit(e) {
+  e.preventDefault();
+
+  const value = footerFormInput.value;
+
+  if (!emailRegex.test(value)) {
+    footerFormError.innerText = "Please insert a valid email";
+    footerFormInput.style.color = "hsl(12, 88%, 59%)";
+  } else {
+    alert("Email sent with success!");
+    footerFormInput.value = "";
+    footerFormError.innerText = "";
+    footerFormInput.style.color = "hsl(240, 8%, 78%)";
+  }
+}
+
 /* ================ Events ============== */
 
 navToggle.addEventListener("click", toggleNavbar);
+
 navLinks.forEach((navlink) => {
   navlink.addEventListener("click", closeNavbar);
 });
+
+footerForm.addEventListener("submit", handleFormSubmit);
 
 /* =============== Slider =============== */
 
