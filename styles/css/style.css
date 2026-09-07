@@ -175,6 +175,8 @@ ul {
 .main__testimonials {
   padding: 1.975rem;
   margin-block-end: 3.75rem;
+  margin: 0 auto;
+  position: relative;
 }
 .main__testimonials-title {
   color: hsl(228, 39%, 23%);
@@ -182,11 +184,33 @@ ul {
   text-align: center;
   margin-block-end: 4.75rem;
 }
+.main__testimonial-cards {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding-block-start: 1.5625rem;
+}
+.main__testimonial-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-block: 16px;
+}
 .main__testimonial {
   position: relative;
   margin-block-end: 2.5rem;
   background-color: hsl(0, 0%, 98%);
   padding: 0.975rem;
+  flex: 0 0 100%;
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .main__testimonial-img {
   width: 50px;
@@ -229,6 +253,19 @@ ul {
 .main__testimonial-btn {
   display: block;
   margin: 0 auto;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 1px solid hsl(12, 87%, 69%);
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.dot.active {
+  background-color: hsl(12, 87%, 69%);
 }
 
 .main__cta {
@@ -381,6 +418,9 @@ ul {
   .main__about-service-title {
     background-color: transparent;
   }
+  .main__testimonial {
+    flex: 0 0 calc((100% - 16px) / 2);
+  }
 }
 @media (width >= 992px) {
   .header__nav {
@@ -438,6 +478,9 @@ ul {
     padding-inline: 1.75rem;
     margin-block-end: 2.5rem;
   }
+  .main__testimonial {
+    flex: 0 0 calc((100% - 32px) / 3);
+  }
   .main__cta {
     background-image: url(../../assets/images/bg-simplify-section-desktop.svg);
     background-repeat: no-repeat;
@@ -489,6 +532,9 @@ ul {
 @media (width >= 1200px) {
   .hero__text-title {
     font-size: 3.5rem;
+  }
+  .main__testimonial {
+    flex: 0 0 calc((100% - 48px) / 4);
   }
 }
 

@@ -4,6 +4,8 @@
   &__testimonials {
     padding: 1.975rem;
     margin-block-end: 3.75rem;
+    margin: 0 auto;
+    position: relative;
 
     &-title {
       color: abstracts.$blue-950;
@@ -13,11 +15,35 @@
     }
   }
 
+  &__testimonial-cards {
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    padding-block-start: 1.5625rem;
+  }
+
+  &__testimonial-dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-block: 16px;
+  }
+
   &__testimonial {
     position: relative;
     margin-block-end: 2.5rem;
     background-color: abstracts.$gray-50;
     padding: 0.975rem;
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
     &-img {
       width: 50px;
@@ -48,5 +74,19 @@
       display: block;
       margin: 0 auto;
     }
+  }
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 1px solid abstracts.$orange-600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+
+  &.active {
+    background-color: abstracts.$orange-600;
   }
 }

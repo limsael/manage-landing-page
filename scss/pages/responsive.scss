@@ -31,6 +31,10 @@
         }
       }
     }
+
+    &__testimonial {
+      flex: 0 0 calc((100% - 16px) / 2);
+    }
   }
 }
 
@@ -83,6 +87,11 @@
       padding-inline: 1.75rem;
       margin-block-end: 2.5rem;
     }
+
+    &__testimonial {
+      flex: 0 0 calc((100% - (16px * 2)) / 3);
+    }
+
     &__cta {
       background-image: url(../../assets/images/bg-simplify-section-desktop.svg);
       background-repeat: no-repeat;
@@ -150,6 +159,12 @@
       &-title {
         font-size: 3.5rem;
       }
+    }
+  }
+
+  .main {
+    &__testimonial {
+      flex: 0 0 calc((100% - (16px * 3)) / 4);
     }
   }
 }
