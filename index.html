@@ -13,6 +13,11 @@
 
     <title>Frontend Mentor | Manage landing page</title>
 
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+    />
+
     <link rel="stylesheet" href="./styles/css/style.css" />
   </head>
   <body>
@@ -236,32 +241,23 @@
 
           <div class="footer__socials-links">
             <a href="#" class="footer__socials-link">
-              <img
-                src="./assets/images/icon-facebook.svg"
-                alt="Facebook Logo"
-              />
+              <i class="fa-brands fa-square-facebook"></i>
             </a>
 
             <a href="#" class="footer__socials-link">
-              <img src="./assets/images/icon-youtube.svg" alt="Youtube Logo" />
+              <i class="fab fa-youtube"></i>
             </a>
 
             <a href="#" class="footer__socials-link">
-              <img src="./assets/images/icon-twitter.svg" alt="Twitter Logo" />
+              <i class="fab fa-twitter"></i>
             </a>
 
             <a href="#" class="footer__socials-link">
-              <img
-                src="./assets/images/icon-pinterest.svg"
-                alt="Pinterest Logo"
-              />
+              <i class="fab fa-pinterest"></i>
             </a>
 
             <a href="#" class="footer__socials-link">
-              <img
-                src="./assets/images/icon-instagram.svg"
-                alt="Instagram Logo"
-              />
+              <i class="fab fa-instagram"></i>
             </a>
           </div>
         </div>
@@ -300,15 +296,18 @@
           </ul>
         </div>
 
-        <div class="footer__mail">
+        <form class="footer__mail" id="footer-mail" action="#">
           <input
-            type="text"
+            type="email"
             class="footer__mail-input"
+            id="footer-mail-input"
             placeholder="Updates in your inbox..."
           />
 
-          <button class="footer__mail-btn">Go</button>
-        </div>
+          <button class="footer__mail-btn" id="footer-mail-btn">Go</button>
+
+          <p id="footer-mail-error" class="footer__mail-error"></p>
+        </form>
       </section>
 
       <section class="footer__copyright">

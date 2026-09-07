@@ -19,7 +19,7 @@
 
     &-img {
       display: block;
-      margin: 0 auto;
+      margin: 1.75rem auto 0.975rem;
       filter: brightness(0) invert(1);
     }
 
@@ -28,8 +28,15 @@
       justify-content: space-between;
     }
 
-    &-link img {
-      width: 30px;
+    &-link {
+      display: inline-block;
+      font-size: 30px;
+      color: abstracts.$gray-50;
+      transition: color 0.3s ease-in-out;
+
+      &:hover {
+        color: abstracts.$orange-600;
+      }
     }
   }
 
@@ -42,11 +49,16 @@
       color: abstracts.$gray-50;
       display: inline-block;
       margin-block: 0.625rem;
+      transition: color 0.3s ease-in-out;
+
+      &:hover {
+        color: abstracts.$orange-600;
+      }
     }
   }
 
   &__mail {
-    margin-block-start: 0.975rem;
+    margin: 0.975rem auto;
 
     &-input {
       padding: 0.975rem 1.75rem;
@@ -61,6 +73,12 @@
 
     &-btn {
       @include abstracts.regular-btn;
+    }
+
+    &-error {
+      margin-block-start: 0.5rem;
+      color: abstracts.$orange-600;
+      font-style: italic;
     }
   }
 

@@ -2,6 +2,9 @@ const navList = document.getElementById("header-nav-list");
 const navToggle = document.getElementById("header-nav-toggle");
 const navToggleImg = document.querySelector("#header-nav-toggle img");
 const navLinks = document.querySelectorAll(".header__nav-link");
+const footerForm = document.getElementById("footer-mail");
+const footerFormInput = document.getElementById("footer-mail-input");
+const footerFormBtn = document.getElementById("footer-mail-btn");
 
 /* ================ Functions ============== */
 
